@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<title>my family book</title>
+<center>
+<body>
+    <h1>Family Book</h1>
+    <hr><hr>
+    <img id="pic" src="family.jpg">
+    <h3 id="name">My Family Book</h3>
+    <button type="button" onclick="next()" class="btn btn-success">Next</button>
+    <hr>
+    <script>
+        var names=[
+            "My father:Karthik",
+            "My mother:Shobha",
+            "Me:Shriya"
+        ]
+        var pic=[
+            "dad.jpg",
+            "mom.jpg",
+            "me.jpg"
+        ]
+        var i=0
+        function next()
+            {
+                i++
+                var family_member=3
+                if(i>family_member)
+                {
+                    i=0
+                }
+                var nextName=names[i]
+                var nextPic=pic[i]
+                document.getElementById("pic").src=nextPic
+                document.getElementById("name").innerHTML=nextName
+            }
+        
+    </script>
+</body>
+</center>
+</html>
